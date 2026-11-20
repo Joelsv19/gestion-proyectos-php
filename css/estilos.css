@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.encabezado {
+    padding: 18px 24px;
+    background: #fff;
+    border-bottom: 1px solid #d5dbe1;
+}
+
+.encabezado h1 {
+    max-width: 1100px;
+    margin: 0 auto 12px;
+    color: #234f78;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+nav a {
+    padding: 7px 12px;
+    color: #234f78;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background: #e8eef4;
+    border-color: #c4d2df;
+}
+
+.contenedor {
+    width: min(1100px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+section {
+    margin-bottom: 28px;
+}
+
+h2 {
+    margin: 0 0 12px;
+    color: #333;
+    font-size: 20px;
+}
+
+.formulario {
+    display: grid;
+    max-width: 620px;
+    gap: 8px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #d5dbe1;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    min-height: 36px;
+    padding: 7px 9px;
+    color: #222;
+    background: #fff;
+    border: 1px solid #aeb8c2;
+    border-radius: 3px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select[multiple] {
+    height: auto;
+}
+
+.fila-fechas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.fila-fechas div {
+    display: grid;
+    gap: 8px;
+}
+
+.acciones,
+.acciones-tabla {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.acciones {
+    margin-top: 8px;
+}
+
+button,
+.boton {
+    display: inline-block;
+    padding: 7px 12px;
+    color: #fff;
+    background: #315f87;
+    border: 1px solid #315f87;
+    border-radius: 3px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.boton:hover {
+    background: #254c6d;
+}
+
+.secundario {
+    color: #333;
+    background: #e7eaed;
+    border-color: #bdc5cc;
+}
+
+.secundario:hover {
+    background: #d9dee2;
+}
+
+.peligro {
+    background: #8a3c3c;
+    border-color: #8a3c3c;
+}
+
+.peligro:hover {
+    background: #713030;
+}
+
+.pequeno {
+    padding: 4px 8px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #d5dbe1;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 9px 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+th {
+    background: #e9edf1;
+    font-weight: 600;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.acciones-tabla form {
+    margin: 0;
+}
+
+.mensaje {
+    padding: 10px 12px;
+    background: #e8eef4;
+    border: 1px solid #c4d2df;
+    border-radius: 3px;
+}
+
+.mensaje.exito {
+    background: #edf5ed;
+    border-color: #bfd5bf;
+}
+
+.mensaje.error {
+    background: #f8eded;
+    border-color: #dfbcbc;
+}
+
+.pie {
+    padding: 10px 16px;
+    color: #555;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 620px) {
+    .encabezado {
+        padding: 16px;
+    }
+
+    .encabezado h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .fila-fechas {
+        grid-template-columns: 1fr;
+    }
+}
